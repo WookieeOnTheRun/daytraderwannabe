@@ -6,18 +6,11 @@ import yfinance as yf
 import os
 import sys
 
+import modules.calculations as calc
+
 # define variables
 # tckrList = input( "Enter the ticker(s) value you'd like to research seperated by commas: " )
-# tckrList = [ "MSFT" ]
-tckrList = [ "MSFT", "VYM", "VGLT", "FRESX", "GLD", "FSPHX", "VEA", "VNQ", "VWO", "VB", "VOO", "VBIPX" ]
-
-# small routine to load any packages in 'modules' folder
-currDir = os.getcwd()
-addDir = currDir + "\modules"
-
-sys.path.insert( 0, addDir )
-
-from modules import calculations as calc
+tckrList = []
 
 # Ticker Info keys
 """ ['exchange', 'shortName', 'longName', 'exchangeTimezoneName', 
